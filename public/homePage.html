@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timberborn stats</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="column1" class="column">
+        <div id="savePicker">
+            <h2>Choose Timberborn world</h2>
+            <label for="debugCheckbox">Include debug information</label>
+            <input id="debugCheckbox" type="checkbox" checked="false"><br>
+            <select name="saves" id="saveSelector"></select>
+            <button onclick="fetchData()">
+                <img id="inlineResendIcon" src="refresh-icon.png" alt="refresh-icon">
+            </button>
+        </div>
+        <h2>Extracted data:</h2>
+        <div id="dataDiv">
+            <div>
+                <span id="saveTime"></span> <br>
+                <span id="gameTime"></span>
+                <hr style="border: 5px solid black; width: 100%; margin-left: 0; ">
+            </div>
+            <div id="beaverData">
+                <table id="beaverTable">
+                    <tr>
+                        <th>Adults</th>
+                        <td id="adultBeavers"></td>
+                    </tr>
+                    <tr>
+                        <th>Children</th>
+                        <td id="childBeavers"></td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td id="beaverTotal"></td>
+                    </tr>
+                </table>
+            </div>
+            <hr class="sectionDivider">
+            <div id="dataSummary">
+                <p>Calculate with an efficiency of <input type="number" id="efficiencyPercent" min="0" max="100"
+                        step="1" value="85">%</p>
+                <div id="foodSummary">
+                    <h4>Food</h4>
+                    <span>Total <span id="foodTotal" class="data"></span> / <span id="foodMax"
+                    class="data"></span></span><br>
+                    <span>Lasts for <span id="foodSupply" class="data"></span> days</span><br>
+                    <span>Producing <span id="foodProduction" class="data"></span> / day</span>
+                </div>
+                <hr>
+                <div id="waterSummary">
+                    <h4>Water</h4>
+                    <span>Total <span id="waterTotal" class="data"></span> / <span id="waterMax"
+                            class="data"></span></span><br>
+                    <span>Lasts for <span id="waterSupply" class="data"></span> days</span><br>
+                    <span>Producing <span id="waterProduction" class="data"></span> / day</span>
+                </div>
+            </div>
+            <div id="goodsData">
+
+            </div>
+            <div id="cropData">
+
+            </div>
+        </div>
+    </div>
+    <div id="column2"  class="column">
+        <h3>Buildings</h3>
+        <table id="buildingList"></table>
+    </div>
+    <div id="column3" class="column">
+        <h3>Food storage breakdown</h3>
+        <table id="foodStorageBreakdown">
+            <tr>
+                <th>Used</th>
+                <th></th>
+                <th>Total</th>
+                <th>Food</th>
+            </tr>
+        </table>
+        <h3>Crops</h3>
+        <table id="cropBreakdown"></table>
+    </div>
+</body>
+<script src="constants.js"></script>
+<script src="data.js"></script>
+
+</html>
