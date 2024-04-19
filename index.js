@@ -26,7 +26,7 @@ catch (err) {
     console.error("Error while trying to read from Timberborn_save_location.txt")
     console.error(err)
     return
- }
+}
 
 app.use(express.static(__dirname + "/public"))
 
@@ -50,7 +50,7 @@ app.get("/saves", (req, res) => {
             if (!cache[a.name]) {
                 for (file of fs.readdirSync(path.join(a.path, a.name))) {
                     let saveTime = fs.statSync(path.join(a.path, a.name, file)).mtimeMs
-                    if (saveTime > AlatestSaveTime) AlatestSaveTime =  saveTime
+                    if (saveTime > AlatestSaveTime) AlatestSaveTime = saveTime
                 }
                 cache[a.name] = AlatestSaveTime
             }
@@ -58,7 +58,7 @@ app.get("/saves", (req, res) => {
             if (!cache[b.name]) {
                 for (file of fs.readdirSync(path.join(b.path, b.name))) {
                     let saveTime = fs.statSync(path.join(b.path, b.name, file)).mtimeMs
-                    if (saveTime > BlatestSaveTime) BlatestSaveTime =  saveTime
+                    if (saveTime > BlatestSaveTime) BlatestSaveTime = saveTime
                 }
                 cache[b.name] = BlatestSaveTime
             }
@@ -82,12 +82,12 @@ app.get("/data", (req, res) => {
         }
     }
     saveFilePath = path.join(curSave, saveFilePath)
-    
+
     saveReader(saveFilePath, (result) => {
         if (!req.query.sendErrors) result.errors = undefined
         res.end(JSON.stringify(result));
     })
-    
+
 })
 
 app.listen(8000, () => {
