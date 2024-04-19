@@ -4,3 +4,6 @@ Timberborn_save_location.txt
 error.txt
 err.txt
 out.txt
+
+#utilites
+textFormatter.py
