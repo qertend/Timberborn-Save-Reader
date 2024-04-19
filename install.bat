@@ -1,20 +1,20 @@
-@echo off
+@ECHO OFF
 ::check if Nodejs is already installed
 winget list > .\winList
-find /i "Node.js" .\winList > nul
-IF ERRORLEVEL 1 ( goto installNode ) ELSE ( goto nodeInstalled )
+FIND /i "Node.js" .\winList > NUL
+IF ERRORLEVEL 1 ( GOTO installNode ) ELSE ( GOTO nodeInstalled )
 
 ::install nodejs using winget
 :installNode
-echo Node.js not found, installing...
+ECHO Node.js not found, installing...
 winget install "Node.js"
-goto finish
+GOTO finish
 
 :nodeInstalled
-echo Node.js is already installed, exiting...
+ECHO Node.js is already installed, exiting...
 
 ::clean up temp files and exit
 :finish
-del .\winList
-pause
-exit
+DEL .\winList
+PAUSE
+EXIT
