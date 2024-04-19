@@ -8,6 +8,8 @@ IF ERRORLEVEL 1 ( GOTO installNode ) ELSE ( GOTO nodeInstalled )
 :installNode
 ECHO Node.js not found, installing...
 winget install "Node.js"
+::download node modules
+npm i
 GOTO finish
 
 :nodeInstalled
