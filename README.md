@@ -10,8 +10,8 @@ or
 
 ### 2: 
 Run the commands listed below in the Timberborn save reader directory  
-install node JS
+install node JS  
     winget install node.js  
 
-install node modules 
+install node modules  
     npm i  
