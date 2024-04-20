@@ -3,31 +3,7 @@ const path = require("path")
 const saveReader = require("./saveReader.js")
 const express = require("express")
 const app = express()
-let savesDir = ""
-//check Timberborn_save_location.txt contents
-try {
-    savesDir = fs.readFileSync(__dirname + "/Timberborn_save_location.txt").toString("utf-8")
-    try {
-        let directories = fs.readdirSync(savesDir, { withFileTypes: true }).filter(dirent => !dirent.isFile()).map(dirent => dirent.name)
-        console.log("Timberborn worlds found: ")
-        for (let i of directories) {
-            console.log("- " + i);
-        }
-    }
-    //file content is not a directory path
-    catch (err) {
-        console.error("Path in Timberborn_save_location.txt does not point to a directory")
-        console.error(err)
-        return
-    }
-}
-//file does not exist error
-catch (err) {
-    console.error("Error while trying to read from Timberborn_save_location.txt")
-    console.error(err)
-    return
-}
-
+const {savesDir} = require("./saveLocation.json")
 app.use(express.static(__dirname + "/public"))
 
 app.get("/", (req, res) => {

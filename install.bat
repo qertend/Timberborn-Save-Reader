@@ -11,7 +11,7 @@ winget install "Node.js"
 ::download node modules
 npm i
 ::init Timberborn_save_location.txt
-echo "%USERPROFILE%\documents\Timberborn\Saves\" > ".\Timberborn_save_location.txt"
+echo {"savesDir": "%USERPROFILE%\documents\Timberborn\Saves\" } > ".\saveLocation.json"
 GOTO finish
 
 :nodeInstalled

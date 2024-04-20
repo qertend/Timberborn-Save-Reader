@@ -1,7 +1,7 @@
 #just no
 /node_modules
 #personal data leak
-Timberborn_save_location.txt
+saveLocation.json
 #output files
 error.txt
 err.txt
