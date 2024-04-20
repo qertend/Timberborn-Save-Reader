@@ -11,7 +11,7 @@ It seems `install.bat` trips Avast's Behaviour shield protection
 
   
 
-and potentially other antivirus software you'll either have to:
+and potentially other antivirus software so you'll either have to:
 
   
 
@@ -53,7 +53,7 @@ Create `Timberborn_save_location.txt`, and write in it the path to the folder Ti
 
 The default location is 
 
-> C:\Users\[user]\documents\Timberborn\Saves\
+> C:\Users\\[user]\documents\Timberborn\Saves\
 
   
   
