@@ -1,3 +1,4 @@
-start "Timberborn save reader" /min npm start
+@ECHO OFF
+START "Timberborn save reader" /min npm start
 
-start "" http://localhost:8000
+START "" http://localhost:8000
