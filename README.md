@@ -11,7 +11,7 @@ It seems `install.bat` trips Avast's Behaviour shield protection
 
   
 
-and potentially other antivirus software you'll either have to:
+and potentially other antivirus software so you'll either have to:
 
   
 
