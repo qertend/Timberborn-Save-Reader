@@ -24,11 +24,5 @@ Run the commands listed below in the Timberborn save reader directory
 	npm i
 
 # Using the program
-### First launch preparations
-
-Before using the program for the first time, create a file called `Timberborn_save_location.txt` in the Timberborn save reader folder, and copy into it the path of the folder Timberborn uses to store the save files. It should look something like this:  
-	
-	C:/Users/[user]/Documents/Timberborn/Saves/
-
 ### Launching the program
 Simply run `start.bat` to start the program
