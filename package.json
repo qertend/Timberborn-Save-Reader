@@ -1,7 +1,7 @@
 {
-  "name": "timberborn-daily-report",
+  "name": "timberborn-save-reader",
   "version": "1.0.0",
-  "description": "Displays resources and other data from Timberborn as a graph",
+  "description": "Reads and processes Timberborn save files to display statistics and forecasts",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
