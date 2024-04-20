@@ -58,6 +58,15 @@ function calculateStockPile() {
     */
 }
 
+function calculateProcessingNeeds() {
+    const eff = get("efficiencyPercent").value / 100
+
+    //wheat
+    {
+
+    }
+}
+
 function fetchData() {
     let queryString = "?save=" + curSave
     if (debugMode) queryString += "&sendErrors=true"
@@ -163,6 +172,8 @@ function displayData() {
         }
     }
 
+    //food processing minimums
+    calculateProcessingNeeds();
     /**
      * Calculate raw food processing needs
      * and display min needed buildings
