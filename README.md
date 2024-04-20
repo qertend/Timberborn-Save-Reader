@@ -53,7 +53,7 @@ Create `Timberborn_save_location.txt`, and write in it the path to the folder Ti
 
 The default location is 
 
-> C:\Users\[user]\documents\Timberborn\Saves\
+> C:\Users\\[user]\documents\Timberborn\Saves\
 
   
   
